@@ -1,0 +1,13 @@
+
+
+<form (ngSubmit)="addProduct()" [formGroup]="productForm">
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">price</label>
+    <input type="number" formControlName="price" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+  </form>

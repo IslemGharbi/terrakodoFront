@@ -1,0 +1,31 @@
+<div class="container">
+
+    <button (click)="logout()" class="btn btn-success">Log Out</button>
+
+
+    <h2>Product List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <button [routerLink]="['/produit/edit', product.id]" class="btn btn-primary">Edit</button>
+
+            <button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+      <button [routerLink]="['/produit/add']" class="btn btn-success">Add Product</button>
+
+    </table>
+  
+   
+        <!-- Button trigger modal -->
